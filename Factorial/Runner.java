@@ -9,9 +9,8 @@ public class Runner {
 	public static int factorials(int i) {
 		int factorial = 1;
 		
-		while (i > 0) {
+		for(; i > 0; i--) {
 			factorial = factorial * i;
-			i--;
 		}
 		
 		return factorial;
