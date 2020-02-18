@@ -13,10 +13,6 @@ public class Runner {
 	}
 	
 	public static List<Integer> oddity(int[] nums) {
-		List<Integer> ints = new ArrayList<>();
-		for (int num : nums) {
-			ints.add(num);
-		}
-		return ints.stream().filter(num -> num % 2 == 1).collect(Collectors.toList());
+		return Arrays.stream(nums).boxed().filter(num -> num % 2 == 1).collect(Collectors.toList());
 	}
 }
