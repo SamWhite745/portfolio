@@ -10,9 +10,6 @@ public class Runner {
 		char[] bChars = b.toCharArray();
 		Arrays.sort(aChars);
 		Arrays.sort(bChars);
-		
-		System.out.println(Arrays.toString(bChars));
-		System.out.println(Arrays.toString(aChars));
 
 		return (Arrays.equals(aChars, bChars));
 	}
