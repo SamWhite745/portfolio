@@ -1,3 +1,5 @@
+//import java.util.Arrays;
+//import java.util.stream.Collectors;
 
 public class Runner {
 	public static void main(String[] args) {
@@ -16,5 +18,7 @@ public class Runner {
 		}
 		
 		return (uniques);
+		
+		//return Arrays.asList(sentence.split("")).stream().distinct().collect(Collectors.joining(""));
 	}
 }
