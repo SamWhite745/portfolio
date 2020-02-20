@@ -1,5 +1,5 @@
 
-public class Fibonacci {
+public class IndexOf {
 	public static void main(String[] args) {
 		System.out.println("index of c in hello = " + indexOf('c',"hello"));
 		System.out.println("index of o in hello = " + indexOf('o',"hello"));
