@@ -11,18 +11,24 @@ public class Runner {
 	}
 
 	public static boolean isArmstrong(int num) {
-		char[] numChars = Integer.toString(num).toCharArray();
-		List<Integer> nums = new ArrayList<>();
-		for (char numChar : numChars) {
-			nums.add(Character.getNumericValue(numChar));
-		}
+// 		char[] numChars = Integer.toString(num).toCharArray();
+// 		List<Integer> nums = new ArrayList<>();
+// 		for (char numChar : numChars) {
+// 			nums.add(Character.getNumericValue(numChar));
+// 		}
 
-		int total = 0;
-		for (Integer c : nums) {
-			total += (c * c * c);
-		}
+// 		int total = 0;
+// 		for (Integer c : nums) {
+// 			total += (c * c * c);
+// 		}
+		
+// 		return total == num;
+		
+		int numLen = String.valueOf(num).length();
+		int r = Arrays.stream(String.valueOf(num).split("")).map(x -> (int) Math.pow(Integer.parseInt(x), numLen))
+				.reduce((acc, next) -> (acc + next)).orElse(-1);
 
-		return total == num;
+		return r == num;
 	}
 
 	public static List<Integer> armstrong(int max) {
